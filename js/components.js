@@ -11,6 +11,7 @@ const createNoDayComponent = () => {
 
     noDay.appendChild(sun);
     noDay.appendChild(text);
+    // noDay.appendChild(helperText);    
 
     return noDay;
 }

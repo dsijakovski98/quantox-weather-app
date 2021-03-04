@@ -10,9 +10,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="styles/global/index.css">
-        <link rel="stylesheet" href="styles/component_styles/header/header.css">
-        <link rel="stylesheet" href="styles/component_styles/weather_section/weather_section.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/component_styles/header.css">
+        <link rel="stylesheet" href="styles/component_styles/converter.css">
+        <link rel="stylesheet" href="styles/component_styles/weather_section.css">
+        <link rel="stylesheet" href="styles/component_styles/weather_list.css">
+        <link rel="stylesheet" href="styles/component_styles/weather_widget.css">
         <title>Q-Weather</title>
     </head>
 
@@ -26,13 +29,52 @@
             </div>
         </header>
 
-        <!-- Weather section -->
-        <main class="weather-container">
-            <div class="weather-list-container">
 
+        <main class="content-wrapper">
+
+            <!-- Convert units section -->
+            <div class="convert-units-container">
+                <div class="temperature-converter">
+                    <h2>Convert temperature units</h2>
+
+                    <input type="radio" id="celsius" name="temperature" value="C" checked>
+                    <label for="celsius">
+                        <strong>C</strong> - Degrees celcius
+                    </label>
+                    <br>
+
+                    <input type="radio" id="kelvin" name="temperature" value="K">
+                    <label for="kelvin">
+                        <strong>K</strong> - Kelvin
+                    </label>
+                    <br>
+                </div>
+
+                <div class="wind-speed-converter">
+                    <h2>Convert wind-speed units</h2>
+                    
+                    <input type="radio" id="ms" name="speed" value="m/s" checked>
+                    <label for="ms">
+                        <strong>m/s</strong> - meters per second
+                    </label>
+                    <br>
+
+                    <input type="radio" id="kmh" name="speed" value="km/h">
+                    <label for="kmh">
+                        <strong>km/h</strong> - kilometers per hour
+                    </label>
+                    <br>
+                </div>
             </div>
-            <div class="weather-widget-container">
-                
+
+            <!-- Weather section -->
+            <div class="weather-container">
+                <div class="weather-list-container">
+
+                </div>
+                <div class="weather-widget-container">
+                    
+                </div>
             </div>
         </main>
 

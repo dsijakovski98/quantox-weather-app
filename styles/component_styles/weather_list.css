@@ -1,0 +1,44 @@
+.weather-list-container {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.weather-list-container .weather-day-container {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1em;
+  margin-bottom: 2em;
+  margin-top: 0;
+  padding: 0.8em;
+  box-shadow: 0px 2px 4px #333;
+  color: #4b054b;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.weather-list-container .weather-day-container h1 {
+  margin-bottom: 0.5em;
+}
+
+.weather-list-container .weather-day-container .weather-day-arrow {
+  font-size: 3rem;
+  margin-right: 0.2em;
+  pointer-events: none;
+  transform: translateX(5em);
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.weather-list-container .weather-day-container:hover {
+  background: #4b054b;
+  color: whitesmoke;
+}
+
+.weather-list-container .weather-day-container:hover .weather-day-arrow {
+  transform: translateX(0);
+  color: inherit;
+}

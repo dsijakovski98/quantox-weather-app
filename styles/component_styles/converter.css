@@ -1,0 +1,17 @@
+.convert-units-container {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #4b054b;
+}
+
+:is(.temperature-converter, .wind-speed-converter) h2 {
+  margin-bottom: 0.5em;
+}
+
+:is(.temperature-converter, .wind-speed-converter) input {
+  margin: 0.2em;
+}
