@@ -12,8 +12,27 @@ const updateWeatherWidget = () => {
     }
     else {
         // TODO: Create weather widget component
-        const day = createWidgetDayComponent();
-        weatherWidget.appendChild(day);
+        const {widgetDay, dayName, dayType, dayTemp, windSpeed, arrowImg, windDir} = createWidgetDayComponent();
+        
+        // Set day name
+        dayName.textContent = selectedDay.day;
+
+        // TODO: Set corresponding weather picture (dayType)
+
+
+        // Set formated temperature
+        const temperature = temperatureFormat(selectedDay.temp, tempUnit);
+        dayTemp.textContent = temperature;
+
+        // Set wind speed
+        windSpeed.textContent = selectedDay.windSpeed + " " + windSpeedUnit;
+
+        // TODO: Rotate the wind image according to the wind direction
+
+        // Set wind direction
+        windDir.textContent = selectedDay.windDirection;
+
+        weatherWidget.appendChild(widgetDay);
     }
 }
 

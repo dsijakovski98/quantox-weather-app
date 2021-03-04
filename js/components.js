@@ -16,9 +16,70 @@ const createNoDayComponent = () => {
 }
 
 const createWidgetDayComponent = () => {
-    const day = document.createElement('h1');
-    day.textContent = "Day";
-    return day;
+    const widgetDay = document.createElement('div');
+    widgetDay.className = 'widget-day-container';
+
+    // Create title section
+    const widgetDayTitle = document.createElement('div');
+    widgetDayTitle.className = "widget-day-title";
+    
+    const dayName = document.createElement('h1');
+    dayName.textContent = 'Day'; // placeholder text
+    const dayType = document.createElement('img');
+    dayType.src = '/assets/icons/sunny.svg'; // placeholder image
+
+    widgetDayTitle.appendChild(dayName);
+    widgetDayTitle.appendChild(dayType);
+
+
+    // Create separator
+    const widgetSeparator = document.createElement('div');
+    widgetSeparator.className = 'widget-separator';
+
+
+    // Create temperature section
+    const widgetDayTemperature = document.createElement('div');
+    widgetDayTemperature.className = 'widget-day-temperature';
+
+    const dayTemp = document.createElement('h2');
+    dayTemp.textContent = 'Temp'; // placeholder text
+
+    const tempImg = document.createElement('img');
+    tempImg.src = '/assets/icons/thermometer.svg';
+
+    widgetDayTemperature.appendChild(dayTemp);
+    widgetDayTemperature.appendChild(tempImg);
+
+
+    // Create wind section
+    const widgetDayWind = document.createElement('div');
+    widgetDayWind.className = 'widget-day-wind';
+
+    const windSpeed = document.createElement('h2');
+    windSpeed.textContent = 'Speed'; // placeholder text
+
+    const windContainer = document.createElement('div');
+
+    const arrowImg = document.createElement('img');
+    arrowImg.src = '/assets/icons/arrow.svg';
+
+    const windDir = document.createElement('h4');
+    windDir.textContent = 'Direction'; // placeholder text
+
+    windContainer.appendChild(arrowImg);
+    windContainer.appendChild(windDir);
+
+    widgetDayWind.appendChild(windSpeed);
+    widgetDayWind.appendChild(windContainer);
+
+    
+    widgetDay.appendChild(widgetDayTitle);
+    widgetDay.appendChild(widgetSeparator);
+    widgetDay.appendChild(widgetDayTemperature);
+    widgetDay.appendChild(widgetDayWind);
+
+
+    return { widgetDay, dayName, dayType, dayTemp, windSpeed, arrowImg, windDir };
 }
 
 const createWeatherDayComponent = () => {
